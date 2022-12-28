@@ -1,0 +1,34 @@
+<h2>Products</h2>
+<div *ngFor="let product of products">
+  <!-- <h3>
+    {{ product.name }}
+  </h3> -->
+
+  <h3>
+    <a [title]="product.name + ' details'">
+      {{ product.name }}
+    </a>
+  </h3>
+
+  <p *ngIf="product.description">
+    Description: {{ product.description }}
+  </p>
+
+  <button type="button" (click)="share()">
+    Share
+  </button>
+
+  <!-- Update the ProductListComponent to receive data from the ProductAlertsComponent.
+  Bind app-product-alerts to the onNotify() method of the product list component, app-product-alerts is what displays the Notify Me button. -->
+  <app-product-alerts
+    [product]="product"
+    (notify)="onNotify()">
+  </app-product-alerts>
+
+</div>
+
+<!-- 
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+-->

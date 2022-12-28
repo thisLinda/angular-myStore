@@ -1,0 +1,6 @@
+<!-- To make the Notify Me button work, the child component needs to notify and pass the data to the parent component. The ProductAlertsComponent needs to emit an event when the user clicks Notify Me and the ProductListComponent needs to respond to the event. -->
+
+<!-- In product-alerts.component.html, update the Notify Me button with an event binding to call the notify.emit() method [(click)="nofify.emit()"] -->
+<p *ngIf="product && product.price > 700">
+  <button type="button" (click)="notify.emit()">Notify Me</button>
+</p>
