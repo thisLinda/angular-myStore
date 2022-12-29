@@ -1,3 +1,5 @@
+// component to retrieve and to render shipping data
+
 import { Component, OnInit } from '@angular/core';
 
 import { Observable } from 'rxjs';
