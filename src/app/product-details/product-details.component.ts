@@ -24,7 +24,7 @@ export class ProductDetailsComponent implements OnInit {
 
   // The addToCart() method does the following: takes the current product as an argument, uses the CartService addToCart() method to add the product to the cart, displays a message that you've added a product to the cart
   addToCart(product: Product) {
-    this.cartService.addToCard(product);
+    this.cartService.addToCart(product);
     window.alert('Your product has been added to the cart');
   }
 
