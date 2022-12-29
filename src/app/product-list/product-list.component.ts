@@ -1,15 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
-import { Product } from '../products';
+import { products } from '../products';
 
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
   styleUrls: ['./product-list.component.css']
 })
-export class ProductListComponent {
+
+export class ProductListComponent implements OnInit {
   products = [...products];
+
+  ngOnInit() {}
 
   share() {
     window.alert('The product has been shared!');
